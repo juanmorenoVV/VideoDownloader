@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+</head>
+<body>
+
+ <header>
+        {% block header %}
+            <h1>VideoDownloader</h1>
+            <img class="vicon" src="{{ url_for('static', filename='images/letra-v.png')}}" alt="">
+        {% endblock %}
+ </header>
+ 
+
+ <main>
+    {% block main %} 
+    
+    <br>
+    {% endblock %}
+    
+</main>
+ 
+ 
+
+
+
+ <footer>
+    {% block footer %} 
+        <div class="container">
+            <h2>This page was designed by Juan Moreno</h2>
+            <br>
+            <h3>Connect whit me on</h3>
+            <br>
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/juan-andres-moreno-valbuena-165ba6301/">
+                    <img class="linkedinicon" src="{{ url_for('static', filename='images/vecteezy_linkedin-logo-png-linkedin-icon-transparent-png_18930480.png')}}" alt="">
+                </a>
+        
+                <a href="https://github.com/juanmorenoVV">
+                    <img class="githubicon" src="{{ url_for('static', filename='images/icons8-github-60.png')}}" alt="">
+                </a>
+                <a href="mailto:juanmandresv@gmail.com?subject=Hi%20Juan%20,%20nice%20to%20meet%20you!">
+                    <img class="gmailicon" src="{{ url_for('static', filename='images/vecteezy_gmail-png-icon_16716465.png')}}" alt="">
+                </a>
+                
+            </div>
+        </div>
+    {% endblock %} 
+ </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% extends "./layout.html" %}
+
+{% block head %} <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">{% endblock %}
+
+{% block title %}VideoDownloader{% endblock %}
+
+{% block main %} 
+<br>
+
+<div class="maincontainer">
+<div class="welcome">
+    <p>WELCOME TO <br>
+        THE VIDEO
+       DOWNLOADER</p>
+</div>
+
+<div class="description">
+    <h2>Give us a url and we download 
+        the video for you.</h2>
+    <p>The video will be downloaded <br>
+        automatically and will be <br> 
+        avaibable on your desktop.
+    </p>
+</div>
+</div>
+<br>
+
+    <form class="downloaderbox" action="{{ url_for('downloadvideo') }}" method="POST" autocomplete="off">
+        <div class="entryarea">
+            <input type="url" name="urlVideo" id="urlVideo" autofocus="autofocus" required>
+            <div class="labelline">Enter the Url</div>
+        </div>
+    
+        <button class="urlbutton">Paste Url</button>
+
+    </form>
+<br>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
